@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Animation property */
+.prince {
+  animation: wiggle 2s linear infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Keyframes */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.project {
+  transform: translatex(-100%);
+  transform: translate(100%);
+  animation: move-in 10s ease-in-out infinite;
+  transform-origin: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes move-in {
   from {
-    transform: rotate(0deg);
+    transform: translatex(-100%);
   }
+
   to {
-    transform: rotate(360deg);
+    transform: translatex(30%);
   }
+}
+ 
+.spin {
+  animation: spin 2s infinite alternate 3s backwards;
+}
+@keyframes spin {
+  0%   {background-color: rgb(9, 255, 0);}
+  25%  {background-color: seagreen;}
+  50%  {background-color: rgb(4, 4, 100);}
+  100% {background-color: green;}
+}
+
+.carou {
+  margin-left: -685px;
+}
+
+.nav.active {
+background-color:lightblue;
+color: darkblue;
+font-weight: bold;
 }
